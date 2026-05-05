@@ -25,6 +25,7 @@ public class Main
         employee1.punchTimeCard(8, 16);
         System.out.println("after day 2 punch in: " + employee1.getHoursWorked());
         System.out.println(employee1.getName() + "'s overtime hours worked: " + String.format("%.1f",employee1.getOvertimeHours()));
+        System.out.println("Employee made: $" + employee1.getTotalPay());
 
     }
 

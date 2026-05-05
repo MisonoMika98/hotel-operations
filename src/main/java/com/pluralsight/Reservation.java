@@ -8,7 +8,8 @@ public class Reservation
     private double price;
 
     // calls the Room class and creates a room object that uses its getters inside the constructor
-    // less typing and, because Room already knows the same roomType and price of the room per night
+    // less typing because Room already knows the same roomType and price of the room per night
+    // reservation price should probably be separate from room price due to taxes and fees, but I wanted to test this
     public Reservation(Room room, int numberOfNights, boolean isWeekend)
     {
         this.roomType = room.getRoomType();
