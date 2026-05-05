@@ -75,4 +75,11 @@ public class Employee
         return payRate * hoursWorked;
     }
 
+
+    // methods
+    public void punchTimeCard(int punchIn, int punchOut)
+    {
+        this.hoursWorked += punchOut - punchIn;
+    }
 }
+

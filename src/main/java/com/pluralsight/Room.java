@@ -45,4 +45,23 @@ public class Room
     public boolean isAvailable() {
         return !isOccupied && !isDirty;
     }
+
+
+    // methods
+    public void checkIn()
+    {
+        isOccupied = true;
+        isDirty = true;
+    }
+
+    public void checkOut()
+    {
+        isOccupied = false;
+        isDirty = true;
+    }
+
+    public void cleanRoom()
+    {
+        isDirty = false;
+    }
 }
