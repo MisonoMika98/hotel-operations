@@ -61,8 +61,8 @@ public class Employee
         this.hoursWorked = hoursWorked;
     }
 
-    // derived getter, if loop inside getter wtf boom
-    public double getOvertimeHoursWorked()
+    // derived getters, if loop inside getter wtf boom
+    public double getOvertimeHours()
     {
         if (hoursWorked > 40)
         {

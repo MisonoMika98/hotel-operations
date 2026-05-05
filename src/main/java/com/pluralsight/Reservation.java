@@ -7,13 +7,14 @@ public class Reservation
     private boolean isWeekend;
     private double price;
 
-    // constructor
-    public Reservation(String roomType, int numberOfNights, boolean isWeekend)
+    // calls the Room class and creates a room object that uses its getters inside the constructor
+    // less typing and, because Room already knows the same roomType and price of the room per night
+    public Reservation(Room room, int numberOfNights, boolean isWeekend)
     {
-        this.roomType = roomType;
+        this.roomType = room.getRoomType();
         this.numberOfNights = numberOfNights;
         this.isWeekend = isWeekend;
-        this.price = 0;
+        this.price = room.getPrice();
     }
 
 
@@ -43,13 +44,15 @@ public class Reservation
         isWeekend = weekend;
     }
 
-    public double getPrice() {
-        return price;
-    }
+
 
     // derived getter
     public double getReservationTotal()
     {
+        if (isWeekend)
+        {
+            return numberOfNights * price * 1.10;
+        }
         return numberOfNights * price;
     }
 }
