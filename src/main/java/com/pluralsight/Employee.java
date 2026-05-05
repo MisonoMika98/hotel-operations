@@ -71,7 +71,8 @@ public class Employee
         return 0;
     }
 
-    public double getTotalPay(){
+    public double getTotalPay()
+    {
         return payRate * hoursWorked;
     }
 
