@@ -1,5 +1,8 @@
 package com.pluralsight;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Employee
 {
     private int employeeId;
@@ -80,6 +83,10 @@ public class Employee
     // methods
     public void punchTimeCard(int punchIn, int punchOut)
     {
+        LocalDateTime currentTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
+        String timeStamp = currentTime.format(formatter);
+        System.out.println("Punched Time: " + timeStamp);
         this.hoursWorked += punchOut - punchIn;
     }
 }
