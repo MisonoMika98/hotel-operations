@@ -50,7 +50,7 @@ public class Main
 
         Hotel hotel2 = new Hotel("Chill Hotel", 15, 5, 10, 2);
         System.out.println(hotel2.getHotelName() + "'s available rooms and suites: "+ hotel2.getAvailableRooms() + " and " + hotel2.getAvailableSuites());
-        hotel2.bookRoom(15, false);
+        hotel2.bookRoom(7, false);
         System.out.println("Available rooms: " + hotel2.getAvailableRooms());
 
     }

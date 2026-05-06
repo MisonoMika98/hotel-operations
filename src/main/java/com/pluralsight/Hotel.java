@@ -22,8 +22,8 @@ public class Hotel
         this.hotelName = hotelName;
         this.numberOfBasicRooms = numberOfBasicRooms;
         this.numberOfSuites = numberOfSuites;
-        this.bookedBasicRooms = 0;
-        this.bookedSuites = 0;
+        this.bookedBasicRooms = bookedBasicRooms;
+        this.bookedSuites = bookedSuites;
 
     }
 
@@ -52,15 +52,21 @@ public class Hotel
 
     // methods/derived getters
 
-    public boolean bookRoom(int numberOfBasicRooms, boolean isSuite)
+    public boolean bookRoom(int numberOfRequestedRooms, boolean isSuite)
     {
         if (isSuite)
         {
-            bookedSuites += 1;
+            if (numberOfRequestedRooms + bookedSuites <= numberOfSuites)
+            {
+                bookedSuites += numberOfRequestedRooms;
+            }
         }
         else
         {
-            bookedBasicRooms += 1;
+            if (numberOfRequestedRooms + bookedBasicRooms <= numberOfBasicRooms)
+            {
+                bookedBasicRooms += numberOfRequestedRooms;
+            }
         }
         return true;
     }
