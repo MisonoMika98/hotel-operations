@@ -4,31 +4,10 @@ public class Main
 {
     static void main()
     {
-        // testing make into methods later if needed
-        System.out.println();
-
-
-        Room room404 = new Room("double", 2, 200.50, false, false);
-        System.out.println("Room404's availability: " + room404.isAvailable());
-        System.out.println();
-        room404.checkIn();
-        System.out.println("Room404's availability: " + room404.isAvailable());
-        System.out.println();
-        room404.checkOut();
-        // still dirty
-        System.out.println("Room404's availability: " + room404.isAvailable());
-        System.out.println();
-        room404.cleanRoom();
-        // room is now clean and empty
-        System.out.println("Room404's availability: " + room404.isAvailable());
-        System.out.println();
-
-
-
-        Reservation reservation1 = new Reservation(room404, 7, true);
-        System.out.printf("Reservation total: " + "$" + "%.2f", reservation1.getReservationTotal());
-        System.out.println();
-        System.out.println();
+//        Reservation reservation1 = new Reservation(room404, 7, true);
+//        System.out.printf("Reservation total: " + "$" + "%.2f", reservation1.getReservationTotal());
+//        System.out.println();
+//        System.out.println();
 
 
 
